@@ -42,21 +42,21 @@ def _chunks(word_timings: Sequence[WordTiming]) -> list[tuple[str, float, float]
 
 def _caption_png(text: str, index: int, video_size: tuple[int, int]) -> Path:
     width, height = video_size
-    image = Image.new("RGBA", (width, 300), (0, 0, 0, 0))
+    image = Image.new("RGBA", (width, 320), (0, 0, 0, 0))
     draw = ImageDraw.Draw(image)
     text = text.upper()
-    stroke = 8
-    font_size = 78
-    while font_size >= 48:
+    stroke = 10
+    font_size = 110
+    while font_size >= 56:
         font = _font(font_size)
         bbox = draw.multiline_textbbox((0, 0), text, font=font, stroke_width=stroke, spacing=8, align="center")
         if bbox[2] - bbox[0] <= width - 80:
             break
-        font_size -= 4
+        font_size -= 6
     tw = bbox[2] - bbox[0]
     th = bbox[3] - bbox[1]
     x = (width - tw) / 2
-    y = (300 - th) / 2 - 8
+    y = (320 - th) / 2 - 8
     draw.multiline_text(
         (x, y),
         text,

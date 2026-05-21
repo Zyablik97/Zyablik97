@@ -61,7 +61,7 @@ def _pollinations_image(keyword: str, target_dir: Path, index: int) -> Path | No
     url = f"https://image.pollinations.ai/prompt/{prompt}?width=1080&height=1920&nologo=true&model=flux&seed={random.randint(1, 999999)}"
     path = target_dir / f"pollinations_{index}.jpg"
     try:
-        response = requests.get(url, timeout=12)
+        response = requests.get(url, timeout=60)
         response.raise_for_status()
         path.write_bytes(response.content)
         return path
