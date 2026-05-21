@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+out/*.mp4
+out/*.m4a
+out/*.mp3
+state/used_topics.json
+*TEMP_MPY*.mp4
+.DS_Store
