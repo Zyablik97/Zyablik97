@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pastella — мебель в пастельных тонах для тёплого, уютного дома. Бесплатная доставка, гарантия 5 лет, ручная работа." />
+  <title>Pastella — мебель для тёплого дома</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============== LOADER ============== -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__mark">P</span>
+      <span class="loader__word">astella</span>
+      <span class="loader__bar"><span class="loader__bar-fill"></span></span>
+    </div>
+  </div>
+
+  <!-- ============== CURSOR ============== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor cursor--dot" id="cursorDot"></div>
+
+  <!-- ============== HEADER ============== -->
+  <header class="header" id="header">
+    <a class="brand" href="#home" data-cursor="grow">
+      <span class="brand__icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 22V14a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v8" />
+          <path d="M4 22h24" />
+          <path d="M9 22v3M23 22v3" />
+        </svg>
+      </span>
+      <span class="brand__name">Pastella</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#collections" data-cursor="grow">Коллекции</a>
+      <a href="#catalog" data-cursor="grow">Каталог</a>
+      <a href="#story" data-cursor="grow">О бренде</a>
+      <a href="#reviews" data-cursor="grow">Отзывы</a>
+      <a href="#contact" data-cursor="grow">Контакты</a>
+    </nav>
+
+    <div class="header__cta">
+      <button class="icon-btn" aria-label="Поиск" data-cursor="grow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn icon-btn--bag" aria-label="Корзина" data-cursor="grow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1.2 12.2A2 2 0 0 1 14.8 21H9.2a2 2 0 0 1-2-1.8L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+        <span class="icon-btn__badge">3</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Меню" data-cursor="grow">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" data-parallax="0.25">
+      <img src="assets/images/hero-living-room.png" alt="Гостиная в пастельных тонах" />
+      <div class="hero__bg-veil"></div>
+    </div>
+
+    <div class="blob blob--1" data-parallax="0.4"></div>
+    <div class="blob blob--2" data-parallax="0.18"></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow reveal">
+        <span class="eyebrow__line"></span> Новая коллекция · Весна 2026
+      </p>
+      <h1 class="hero__title">
+        <span class="word-mask"><span class="word">Тёплый</span></span>
+        <span class="word-mask"><span class="word">дом</span></span>
+        <span class="word-mask"><span class="word"><em>начинается</em></span></span>
+        <span class="word-mask"><span class="word">с пастели.</span></span>
+      </h1>
+      <p class="hero__lede reveal">
+        Мебель ручной работы в нежной палитре крема, шалфея и пыльной розы.
+        Лимитированные партии. Свободная доставка по всей стране.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#catalog" class="btn btn--primary" data-cursor="grow">
+          <span>Смотреть каталог</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <a href="#story" class="btn btn--ghost" data-cursor="grow">История бренда</a>
+      </div>
+
+      <div class="hero__meta reveal">
+        <div class="meta-card">
+          <strong>12 лет</strong><span>в производстве мебели</span>
+        </div>
+        <div class="meta-card">
+          <strong>5 лет</strong><span>гарантии на каркас</span>
+        </div>
+        <div class="meta-card">
+          <strong>2 400+</strong><span>счастливых интерьеров</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#collections" class="hero__scroll" data-cursor="grow">
+      <span>прокрутите</span>
+      <span class="hero__scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============== MARQUEE ============== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Ручная работа</span><i>✺</i>
+      <span>Натуральный дуб</span><i>✺</i>
+      <span>Бесплатная доставка</span><i>✺</i>
+      <span>Гарантия 5 лет</span><i>✺</i>
+      <span>Возврат 30 дней</span><i>✺</i>
+      <span>Сделано в России</span><i>✺</i>
+      <span>Ручная работа</span><i>✺</i>
+      <span>Натуральный дуб</span><i>✺</i>
+      <span>Бесплатная доставка</span><i>✺</i>
+      <span>Гарантия 5 лет</span><i>✺</i>
+      <span>Возврат 30 дней</span><i>✺</i>
+      <span>Сделано в России</span><i>✺</i>
+    </div>
+  </div>
+
+  <!-- ============== COLLECTIONS ============== -->
+  <section class="section collections" id="collections">
+    <header class="section__head">
+      <p class="eyebrow reveal"><span class="eyebrow__line"></span> Коллекции</p>
+      <h2 class="section__title reveal">Найдите свою комнату</h2>
+      <p class="section__lede reveal">Шесть продуманных линеек — от воздушной спальни до тёплой обеденной зоны. Все детали сочетаются между собой по палитре и материалам.</p>
+    </header>
+
+    <div class="collections__grid">
+      <article class="collection-card collection-card--lg reveal" style="--tone:#F2D9D3" data-cursor="grow">
+        <div class="collection-card__img"><img src="assets/images/product-sofa.png" alt="Гостиная Blush" /></div>
+        <div class="collection-card__body">
+          <span class="tag">01 · Гостиная</span>
+          <h3>Blush</h3>
+          <p>Мягкие силуэты, букле и пыльная роза.</p>
+          <span class="arrow">→</span>
+        </div>
+      </article>
+
+      <article class="collection-card reveal" style="--tone:#D9E2CE" data-cursor="grow">
+        <div class="collection-card__img"><img src="assets/images/product-armchair.png" alt="Зона отдыха Sage" /></div>
+        <div class="collection-card__body">
+          <span class="tag">02 · Отдых</span>
+          <h3>Sage</h3>
+          <p>Бархат и шалфей.</p>
+          <span class="arrow">→</span>
+        </div>
+      </article>
+
+      <article class="collection-card reveal" style="--tone:#EDE0D1" data-cursor="grow">
+        <div class="collection-card__img"><img src="assets/images/product-bed.png" alt="Спальня Linen" /></div>
+        <div class="collection-card__body">
+          <span class="tag">03 · Спальня</span>
+          <h3>Linen</h3>
+          <p>Лён, дуб и тёплый кремовый свет.</p>
+          <span class="arrow">→</span>
+        </div>
+      </article>
+
+      <article class="collection-card reveal" style="--tone:#E8D8C0" data-cursor="grow">
+        <div class="collection-card__img"><img src="assets/images/product-table.png" alt="Столовая Travertine" /></div>
+        <div class="collection-card__body">
+          <span class="tag">04 · Столовая</span>
+          <h3>Travertine</h3>
+          <p>Травертин, дуб и круглые формы.</p>
+          <span class="arrow">→</span>
+        </div>
+      </article>
+
+      <article class="collection-card collection-card--lg reveal" style="--tone:#F2D9D3" data-cursor="grow">
+        <div class="collection-card__img"><img src="assets/images/product-shelf.png" alt="Хранение Arch" /></div>
+        <div class="collection-card__body">
+          <span class="tag">05 · Хранение</span>
+          <h3>Arch</h3>
+          <p>Арочные шкафы, открытые полки, керамика.</p>
+          <span class="arrow">→</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== CATALOG ============== -->
+  <section class="section catalog" id="catalog">
+    <header class="section__head section__head--row">
+      <div>
+        <p class="eyebrow reveal"><span class="eyebrow__line"></span> Новинки</p>
+        <h2 class="section__title reveal">Бестселлеры весны</h2>
+      </div>
+      <div class="filters reveal">
+        <button class="chip is-active" data-filter="all" data-cursor="grow">Все</button>
+        <button class="chip" data-filter="living" data-cursor="grow">Гостиная</button>
+        <button class="chip" data-filter="bedroom" data-cursor="grow">Спальня</button>
+        <button class="chip" data-filter="dining" data-cursor="grow">Столовая</button>
+        <button class="chip" data-filter="light" data-cursor="grow">Свет</button>
+      </div>
+    </header>
+
+    <div class="products" id="products">
+      <article class="product reveal" data-cat="living" data-cursor="grow">
+        <div class="product__media">
+          <span class="product__badge">−15%</span>
+          <img src="assets/images/product-sofa.png" alt="Диван Aurora" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Aurora</h3>
+          <p>Изогнутый диван, букле, пыльная роза</p>
+          <div class="product__row">
+            <span class="price"><b>89 900 ₽</b><s>105 900 ₽</s></span>
+            <span class="swatches">
+              <i style="--c:#F2D0CC"></i><i style="--c:#E8D7C2"></i><i style="--c:#C8D5BB"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal" data-cat="living" data-cursor="grow">
+        <div class="product__media">
+          <img src="assets/images/product-armchair.png" alt="Кресло Olive" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Olive</h3>
+          <p>Кресло-кокон, бархат, шалфей</p>
+          <div class="product__row">
+            <span class="price"><b>54 200 ₽</b></span>
+            <span class="swatches">
+              <i style="--c:#C8D5BB"></i><i style="--c:#E8D7C2"></i><i style="--c:#A6907A"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal" data-cat="bedroom" data-cursor="grow">
+        <div class="product__media">
+          <span class="product__badge product__badge--new">NEW</span>
+          <img src="assets/images/product-bed.png" alt="Кровать Lumi" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Lumi</h3>
+          <p>Кровать с льняным изголовьем, 160×200</p>
+          <div class="product__row">
+            <span class="price"><b>112 500 ₽</b></span>
+            <span class="swatches">
+              <i style="--c:#F2D0CC"></i><i style="--c:#EAD9C0"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal" data-cat="dining" data-cursor="grow">
+        <div class="product__media">
+          <img src="assets/images/product-table.png" alt="Стол Sole" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Sole</h3>
+          <p>Обеденный стол, травертин, ⌀120</p>
+          <div class="product__row">
+            <span class="price"><b>78 400 ₽</b></span>
+            <span class="swatches">
+              <i style="--c:#E8D7C2"></i><i style="--c:#A6907A"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal" data-cat="light" data-cursor="grow">
+        <div class="product__media">
+          <span class="product__badge product__badge--hot">HOT</span>
+          <img src="assets/images/product-lamp.png" alt="Торшер Arco" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Arco</h3>
+          <p>Торшер на травертиновом основании</p>
+          <div class="product__row">
+            <span class="price"><b>32 900 ₽</b></span>
+            <span class="swatches">
+              <i style="--c:#E8D7C2"></i><i style="--c:#C9A47A"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product reveal" data-cat="living" data-cursor="grow">
+        <div class="product__media">
+          <img src="assets/images/product-shelf.png" alt="Шкаф Arch" />
+          <button class="product__add" data-cursor="grow">В корзину</button>
+        </div>
+        <div class="product__body">
+          <h3>Arch</h3>
+          <p>Арочный стеллаж, дуб + крем</p>
+          <div class="product__row">
+            <span class="price"><b>64 800 ₽</b></span>
+            <span class="swatches">
+              <i style="--c:#EAD9C0"></i><i style="--c:#A6907A"></i>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog__more reveal">
+      <a href="#" class="btn btn--ghost" data-cursor="grow">
+        <span>Показать весь каталог</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============== STORY ============== -->
+  <section class="section story" id="story">
+    <div class="story__inner">
+      <div class="story__media">
+        <div class="story__img story__img--main reveal">
+          <img src="assets/images/showroom.png" alt="Шоурум Pastella" />
+        </div>
+        <div class="story__img story__img--small reveal">
+          <img src="assets/images/product-lamp.png" alt="Деталь — торшер" />
+        </div>
+        <div class="story__sticker reveal">
+          <span>с</span>
+          <strong>2014</strong>
+          <span>года</span>
+        </div>
+      </div>
+
+      <div class="story__text">
+        <p class="eyebrow reveal"><span class="eyebrow__line"></span> О бренде</p>
+        <h2 class="section__title reveal">Мебель, которая успокаивает</h2>
+        <p class="reveal">Мы основали Pastella в маленькой мастерской под Калугой. Хотелось вещей, в которых хочется задержаться: мягких силуэтов, тёплых оттенков и настоящего дерева, а не пластика и плёнки.</p>
+        <p class="reveal">Каждый предмет собирается вручную небольшой командой. Мы работаем с дубом, ясенем и сертифицированным льном, красим водными красками без запаха и испытываем каждое изделие 200 циклов нагрузки перед отгрузкой.</p>
+
+        <div class="counters reveal">
+          <div class="counter">
+            <strong data-counter="12">0</strong>
+            <span>лет ремесла</span>
+          </div>
+          <div class="counter">
+            <strong data-counter="2400" data-suffix="+">0</strong>
+            <span>домов с нашей мебелью</span>
+          </div>
+          <div class="counter">
+            <strong data-counter="98" data-suffix="%">0</strong>
+            <span>возвращаются за второй покупкой</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FEATURES ============== -->
+  <section class="section features">
+    <header class="section__head">
+      <p class="eyebrow reveal"><span class="eyebrow__line"></span> Почему Pastella</p>
+      <h2 class="section__title reveal">Маленькие детали, большая разница</h2>
+    </header>
+
+    <div class="features__grid">
+      <article class="feature reveal" data-cursor="grow">
+        <div class="feature__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4 6 9v8c0 6 4 9 10 11 6-2 10-5 10-11V9l-10-5Z"/>
+            <path d="m12 16 3 3 5-6"/>
+          </svg>
+        </div>
+        <h3>5 лет гарантии</h3>
+        <p>На каркас и механизмы. Без бюрократии — приезжаем сами и чиним.</p>
+      </article>
+
+      <article class="feature reveal" data-cursor="grow">
+        <div class="feature__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18h14V6H3z"/><path d="M17 10h6l4 4v4h-10z"/>
+            <circle cx="8" cy="22" r="2.5"/><circle cx="22" cy="22" r="2.5"/>
+          </svg>
+        </div>
+        <h3>Бесплатная доставка</h3>
+        <p>По всей России. Заносим, собираем, забираем упаковку с собой.</p>
+      </article>
+
+      <article class="feature reveal" data-cursor="grow">
+        <div class="feature__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4v8M16 20v8M4 16h8M20 16h8"/>
+            <circle cx="16" cy="16" r="4"/>
+          </svg>
+        </div>
+        <h3>Ручная работа</h3>
+        <p>Маленькая команда мастеров. Каждое изделие — авторская сборка.</p>
+      </article>
+
+      <article class="feature reveal" data-cursor="grow">
+        <div class="feature__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 6h16l-2 20H10z"/><path d="M12 6V4h8v2"/>
+            <path d="m14 14 2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Возврат 30 дней</h3>
+        <p>Не подошло? Заберём и вернём деньги без вопросов.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== REVIEWS ============== -->
+  <section class="section reviews" id="reviews">
+    <header class="section__head section__head--center">
+      <p class="eyebrow reveal"><span class="eyebrow__line"></span> Отзывы</p>
+      <h2 class="section__title reveal">Что говорят о нас</h2>
+    </header>
+
+    <div class="reviews__carousel" id="reviewsCarousel">
+      <div class="reviews__track">
+        <article class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>«Заказали диван Aurora в гостиную — он будто всегда там стоял. Цвет вживую ещё нежнее, чем на фото, ткань приятная, не маркая. Сборка заняла 20 минут.»</p>
+          <footer><strong>Аня</strong><span>Москва, гостиная 22 м²</span></footer>
+        </article>
+
+        <article class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>«Кровать Lumi — мечта. Долго выбирали между разными брендами, остановились на Pastella из-за льняного изголовья. Спим как в облаке, скрипов и качаний нет.»</p>
+          <footer><strong>Костя и Маша</strong><span>Санкт-Петербург</span></footer>
+        </article>
+
+        <article class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>«Кресло Olive просто космос. Сидишь, читаешь, кот пытается отжать его себе. Бархат не электризуется, шерсть собирается, но легко чистится липким валиком.»</p>
+          <footer><strong>Лиза</strong><span>Казань</span></footer>
+        </article>
+
+        <article class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>«Заказывали целую столовую — стол Sole и 4 стула. Привезли в срок, собрали бережно, упаковку забрали. Травертин выглядит роскошно, цена при этом адекватная.»</p>
+          <footer><strong>Семья Орловых</strong><span>Краснодар</span></footer>
+        </article>
+
+        <article class="review">
+          <div class="review__stars">★★★★★</div>
+          <p>«Пастельная палитра у Pastella — самое то, что искала: ничего кислотного, всё спокойное. Шкаф Arch с арочным верхом стал главным акцентом коридора.»</p>
+          <footer><strong>Алина</strong><span>Екатеринбург</span></footer>
+        </article>
+      </div>
+
+      <div class="reviews__nav">
+        <button class="round-btn" id="reviewsPrev" aria-label="Назад" data-cursor="grow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <span class="reviews__dots" id="reviewsDots"></span>
+        <button class="round-btn" id="reviewsNext" aria-label="Вперёд" data-cursor="grow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== NEWSLETTER / CTA ============== -->
+  <section class="section cta" id="contact">
+    <div class="cta__card reveal">
+      <div class="cta__decor cta__decor--1"></div>
+      <div class="cta__decor cta__decor--2"></div>
+      <div class="cta__decor cta__decor--3"></div>
+
+      <p class="eyebrow"><span class="eyebrow__line"></span> Подпишитесь</p>
+      <h2 class="section__title">Получите −10% на первый заказ</h2>
+      <p class="cta__lede">Раз в неделю присылаем подборки интерьеров, новинки коллекций и закрытые распродажи. Без спама и в любой момент — отписка одним кликом.</p>
+
+      <form class="cta__form" id="newsletterForm" novalidate>
+        <input type="email" placeholder="Ваш email" aria-label="Email" required />
+        <button class="btn btn--primary" type="submit" data-cursor="grow">
+          <span>Получить промокод</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </button>
+      </form>
+      <small class="cta__small">Нажимая кнопку, вы соглашаетесь с политикой обработки данных.</small>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a class="brand brand--light" href="#home" data-cursor="grow">
+          <span class="brand__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22V14a6 6 0 0 1 6-6h8a6 6 0 0 1 6 6v8"/>
+              <path d="M4 22h24"/>
+              <path d="M9 22v3M23 22v3"/>
+            </svg>
+          </span>
+          <span class="brand__name">Pastella</span>
+        </a>
+        <p>Мебель ручной работы в пастельных тонах. Сделано для домов, в которых хочется задержаться.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" data-cursor="grow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Telegram" data-cursor="grow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-9 19-3-8-8-3 20-8z"/><path d="M22 3 10 14"/></svg></a>
+          <a href="#" aria-label="Pinterest" data-cursor="grow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M11 7a4 4 0 0 1 4 4c0 3-2 5-4 5-1 0-2-1-2-2"/><path d="m11 11-2 10"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Магазин</h4>
+        <ul>
+          <li><a href="#catalog" data-cursor="grow">Каталог</a></li>
+          <li><a href="#collections" data-cursor="grow">Коллекции</a></li>
+          <li><a href="#" data-cursor="grow">Распродажа</a></li>
+          <li><a href="#" data-cursor="grow">Подарочный сертификат</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Помощь</h4>
+        <ul>
+          <li><a href="#" data-cursor="grow">Доставка и сборка</a></li>
+          <li><a href="#" data-cursor="grow">Возврат</a></li>
+          <li><a href="#" data-cursor="grow">Уход за мебелью</a></li>
+          <li><a href="#" data-cursor="grow">Частые вопросы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Связь</h4>
+        <ul>
+          <li><a href="tel:+78001112233" data-cursor="grow">+7 800 111-22-33</a></li>
+          <li><a href="mailto:hello@pastella.ru" data-cursor="grow">hello@pastella.ru</a></li>
+          <li>Москва, Малая Бронная 16</li>
+          <li>пн–вс · 10:00–21:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Pastella. Все права защищены.</span>
+      <span>Сделано с заботой и щепоткой пыльной розы.</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Наверх" data-cursor="grow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
